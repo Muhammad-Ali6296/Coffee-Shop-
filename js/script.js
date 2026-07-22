@@ -37,3 +37,24 @@ document.getElementById('menu-toggle').addEventListener('click', function() {
   const navMenu = document.getElementById('nav-menu');
   navMenu.classList.toggle('active');
 });
+
+// Active navigation highlight
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('#nav-menu a');
+
+window.addEventListener('scroll', function() {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    if (window.scrollY >= sectionTop - 100) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active-link');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active-link');
+    }
+  });
+});
