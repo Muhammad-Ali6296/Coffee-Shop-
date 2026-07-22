@@ -260,3 +260,29 @@ header{
 /* ========================================= */
 /* MEMBER 1 CSS END */
 /* ========================================= */
+
+/* 
+member 3 adding his css here
+*/
+.navbar.sticky-active {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.active-link {
+  color: #d7a86e !important;
+  font-weight: 700;
+}
+body.dark-mode {
+  background: #1a1a1a;
+  color: #eee;
+}
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background: #4e342e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
