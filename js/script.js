@@ -100,3 +100,29 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
 document.getElementById('dark-mode-toggle').addEventListener('click', function() {
   document.body.classList.toggle('dark-mode');
 });
+// Testimonial slider
+let currentSlide = 0;
+const slides = document.querySelectorAll('.testimonial-slide');
+
+function showSlide(index) {
+  slides.forEach(slide => slide.style.display = 'none');
+  slides[index].style.display = 'block';
+}
+
+document.getElementById('next-slide').addEventListener('click', function() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+});
+
+document.getElementById('prev-slide').addEventListener('click', function() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+});
+
+showSlide(currentSlide);
+
+// Loading animation
+window.addEventListener('load', function() {
+  const loader = document.getElementById('loader');
+  loader.style.display = 'none';
+});
