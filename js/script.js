@@ -58,3 +58,18 @@ window.addEventListener('scroll', function() {
     }
   });
 });
+
+// Menu filtering
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const filter = this.getAttribute('data-filter');
+
+    document.querySelectorAll('.menu-item').forEach(item => {
+      if (filter === 'all' || item.getAttribute('data-category') === filter) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+});
