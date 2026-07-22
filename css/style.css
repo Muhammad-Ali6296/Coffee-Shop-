@@ -183,5 +183,80 @@ header{
     margin-bottom:15px;
 }
 /* ========================================= */
+/* Footer Section */
+/* ========================================= */
+
+.footer{
+
+    background:#4e342e;
+    color:white;
+    padding:50px 0 20px;
+
+}
+
+
+.footer-content{
+
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+
+}
+
+
+.footer-logo h2{
+
+    color:white;
+    font-size:28px;
+
+}
+
+
+.footer-logo span{
+
+    color:#d7a86e;
+
+}
+
+
+.footer h3{
+
+    margin-bottom:15px;
+
+}
+
+
+.footer-links ul{
+
+    list-style:none;
+
+}
+
+
+.footer-links a{
+
+    text-decoration:none;
+    color:white;
+    line-height:2;
+
+}
+
+
+.footer-contact p{
+
+    margin-bottom:8px;
+
+}
+
+
+.footer-bottom{
+
+    text-align:center;
+    margin-top:30px;
+    border-top:1px solid #765548;
+    padding-top:15px;
+
+}
+/* ========================================= */
 /* MEMBER 1 CSS END */
 /* ========================================= */
