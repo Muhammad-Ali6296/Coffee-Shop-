@@ -92,7 +92,51 @@ header{
 .btn:hover{
     background:#b77b3c;
 }
+/* ========================================= */
+/* Hero Section */
+/* ========================================= */
 
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    background:#f8f5f2;
+}
+
+.hero-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+    padding:60px 0;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:60px;
+    color:#4e342e;
+    margin-bottom:20px;
+    line-height:1.2;
+}
+
+.hero-text p{
+    font-size:18px;
+    margin-bottom:30px;
+    color:#555;
+}
+
+.hero-image{
+    flex:1;
+    text-align:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:450px;
+}
 /* ========================================= */
 /* MEMBER 1 CSS END */
 /* ========================================= */
