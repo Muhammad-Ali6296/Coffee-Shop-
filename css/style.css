@@ -1,0 +1,98 @@
+/* ========================================= */
+/* MEMBER 1 CSS START */
+/* Navigation Bar, Hero, About, Footer */
+/* ========================================= */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f5f2;
+    color:#333;
+    line-height:1.6;
+}
+
+/* More CSS for Member 1 sections will be added below */
+/* ========================================= */
+/* Navigation Bar */
+/* ========================================= */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+header{
+    background:#4e342e;
+    padding:15px 0;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo h2{
+    color:#fff;
+    font-size:28px;
+}
+
+.logo span{
+    color:#d7a86e;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+}
+
+.nav-links li{
+    margin-left:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#fff;
+    font-size:16px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#d7a86e;
+}
+
+.btn{
+    background:#d7a86e;
+    color:#fff;
+    text-decoration:none;
+    padding:10px 20px;
+    border-radius:30px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#b77b3c;
+}
+
+/* ========================================= */
+/* MEMBER 1 CSS END */
+/* ========================================= */
