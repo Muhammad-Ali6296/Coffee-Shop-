@@ -286,3 +286,338 @@ body.dark-mode {
   border-radius: 5px;
   cursor: pointer;
 }
+
+/* ========================================= */
+/* Menu Section */
+/* ========================================= */
+
+.menu {
+    padding: 80px 10%;
+    background-color: #f8f5f2;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    color: #4e342e;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: #777;
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.menu-card {
+    background: white;
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.menu-card h3 {
+    color: #4e342e;
+    margin: 20px 0 10px;
+}
+
+.menu-card p {
+    color: #666;
+    padding: 0 20px;
+}
+
+.menu-card span {
+    display: inline-block;
+    margin: 20px;
+    color: #d7a86e;
+    font-weight: bold;
+    font-size: 18px;
+}
+/* ========================================= */
+/* Featured Coffee */
+/* ========================================= */
+
+.featured {
+    padding: 80px 10%;
+    background: white;
+}
+
+.featured-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.featured-image img {
+    width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.featured-text {
+    max-width: 500px;
+}
+
+.featured-text h3 {
+    font-size: 30px;
+    color: #4e342e;
+    margin-bottom: 20px;
+}
+
+.featured-text p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.featured-text .btn {
+    display: inline-block;
+    background: #4e342e;
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.featured-text .btn:hover {
+    background: #d7a86e;
+}
+/* ========================================= */
+/* Why Choose Us */
+/* ========================================= */
+
+.why-choose {
+    background: #f8f5f2;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.choose-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.choose-box {
+    background: white;
+    width: 250px;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.choose-box:hover {
+    transform: translateY(-10px);
+}
+
+.choose-box h3 {
+    color: #4e342e;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.choose-box p {
+    color: #666;
+    line-height: 1.6;
+}
+/* ========================================= */
+/* Testimonials */
+/* ========================================= */
+
+.testimonials {
+    padding: 80px 10%;
+    background: white;
+    text-align: center;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.testimonial-card {
+    width: 300px;
+    background: #f8f5f2;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+}
+
+.testimonial-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.testimonial-card h3 {
+    color: #4e342e;
+    margin-bottom: 10px;
+}
+
+.testimonial-card p {
+    color: #666;
+    line-height: 1.6;
+    font-style: italic;
+}
+/* ========================================= */
+/* Contact Section */
+/* ========================================= */
+
+.contact {
+    background: #f8f5f2;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 40px auto 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .btn {
+    background: #4e342e;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form .btn:hover {
+    background: #d7a86e;
+}
+/* ========================================= */
+/* Responsive Design */
+/* ========================================= */
+
+@media (max-width: 768px) {
+
+    /* Menu Section */
+    .menu {
+        padding: 50px 5%;
+    }
+
+    .menu-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-card {
+        width: 90%;
+    }
+
+
+    /* Featured Coffee */
+    .featured {
+        padding: 50px 5%;
+    }
+
+    .featured-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .featured-image img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+
+    /* Why Choose Us */
+    .why-choose {
+        padding: 50px 5%;
+    }
+
+    .choose-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .choose-box {
+        width: 90%;
+    }
+
+
+    /* Testimonials */
+    .testimonials {
+        padding: 50px 5%;
+    }
+
+    .testimonial-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial-card {
+        width: 90%;
+    }
+
+
+    /* Contact Form */
+    .contact {
+        padding: 50px 5%;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+
+    /* Section Titles */
+    .section-title {
+        font-size: 28px;
+    }
+
+}
