@@ -21,10 +21,13 @@ document.getElementById('back-to-top')?.addEventListener('click', function() {
 });
 
 // Smooth scrolling for nav links
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href === '#' || href.length <= 1) return; // skip empty hash links
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
+    const target = document.querySelector(href);
     if (target) target.scrollIntoView({ behavior: 'smooth' });
   });
 });

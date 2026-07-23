@@ -271,10 +271,7 @@ member 3 adding his css here
   color: #d7a86e !important;
   font-weight: 700;
 }
-body.dark-mode {
-  background: #1a1a1a;
-  color: #eee;
-}
+
 #back-to-top {
   position: fixed;
   bottom: 20px;
@@ -316,6 +313,66 @@ body.dark-mode {
     flex-wrap: wrap;
   }
 }
+.filter-btn {
+  background: #fff;
+  border: 2px solid #d7a86e;
+  color: #4e342e;
+  padding: 8px 20px;
+  margin: 0 8px 30px;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #d7a86e;
+  color: #fff;
+}
+/*  adding the dark mode functionality  */
+body.dark-mode {
+  background: #1a1a1a;
+  color: #eee;
+}
+
+body.dark-mode .hero,
+body.dark-mode .about,
+body.dark-mode .menu,
+body.dark-mode .featured,
+body.dark-mode .why-choose,
+body.dark-mode .testimonials,
+body.dark-mode .contact {
+  background: #1a1a1a;
+  color: #eee;
+}
+
+body.dark-mode .hero-text h1,
+body.dark-mode .about-text h2,
+body.dark-mode .section-title,
+body.dark-mode .featured-text h3,
+body.dark-mode .choose-box h3,
+body.dark-mode .testimonial-card h3 {
+  color: #fff;
+}
+
+body.dark-mode .menu-card,
+body.dark-mode .choose-box,
+body.dark-mode .testimonial-card {
+  background: #2a2a2a;
+  color: #eee;
+}
+
+body.dark-mode .menu-card p,
+body.dark-mode .choose-box p,
+body.dark-mode .testimonial-card p,
+body.dark-mode .hero-text p,
+body.dark-mode .about-text p,
+body.dark-mode .section-subtitle {
+  color: #ccc;
+}
+
+/* member03  css ends here   */
 
 /* ========================================= */
 /* Menu Section */
