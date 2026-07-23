@@ -54,34 +54,35 @@ window.addEventListener('scroll', function() {
 });
 
 // Menu filtering
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.addEventListener('click', function() {
-    const filter = this.getAttribute('data-filter');
-    document.querySelectorAll('.menu-item').forEach(item => {
-      item.style.display = (filter === 'all' || item.getAttribute('data-category') === filter) ? 'block' : 'none';
+// Menu filtering (auto-generated buttons)
+const menuSection = document.querySelector('.menu .container');
+const menuCards = document.querySelectorAll('.menu-card');
+
+if (menuSection && menuCards.length > 0) {
+  const filterBar = document.createElement('div');
+  filterBar.innerHTML = `
+    <button class="filter-btn" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="hot">Hot</button>
+    <button class="filter-btn" data-filter="cold">Cold</button>
+  `;
+  menuSection.insertBefore(filterBar, document.querySelector('.menu-items'));
+
+  const coldKeywords = ['iced', 'cold', 'frappe'];
+  menuCards.forEach(card => {
+    const name = card.querySelector('h3').textContent.toLowerCase();
+    const isCold = coldKeywords.some(word => name.includes(word));
+    card.setAttribute('data-category', isCold ? 'cold' : 'hot');
+  });
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const filter = this.getAttribute('data-filter');
+      menuCards.forEach(card => {
+        card.style.display = (filter === 'all' || card.getAttribute('data-category') === filter) ? 'block' : 'none';
+      });
     });
   });
-});
-
-// Contact form validation
-document.getElementById('contact-form')?.addEventListener('submit', function(e) {
-  e.preventDefault();
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  if (!name || !email || !message) {
-    alert('Please fill in all fields.');
-    return;
-  }
-  if (!emailPattern.test(email)) {
-    alert('Please enter a valid email address.');
-    return;
-  }
-  alert('Form submitted successfully!');
-  this.reset();
-});
+}
 
 // Dark mode toggle
 document.getElementById('dark-mode-toggle')?.addEventListener('click', function() {
@@ -89,27 +90,26 @@ document.getElementById('dark-mode-toggle')?.addEventListener('click', function(
 });
 
 // Testimonial slider
-let currentSlide = 0;
-const slides = document.querySelectorAll('.testimonial-slide');
-function showSlide(index) {
-  slides.forEach(slide => slide.style.display = 'none');
-  if (slides[index]) slides[index].style.display = 'block';
+// Testimonial slider (auto-rotate)
+const testimonialCards = document.querySelectorAll('.testimonial-card');
+let currentTestimonial = 0;
+
+function showTestimonial(index) {
+  testimonialCards.forEach(card => card.style.display = 'none');
+  if (testimonialCards[index]) testimonialCards[index].style.display = 'block';
 }
-document.getElementById('next-slide')?.addEventListener('click', function() {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
-});
-document.getElementById('prev-slide')?.addEventListener('click', function() {
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-  showSlide(currentSlide);
-});
-showSlide(currentSlide);
+
+if (testimonialCards.length > 0) {
+  showTestimonial(currentTestimonial);
+  setInterval(function() {
+    currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
+    showTestimonial(currentTestimonial);
+  }, 3000);
+}
+
 
 // Loading animation
 window.addEventListener('load', function() {
   const loader = document.getElementById('loader');
   if (loader) loader.style.display = 'none';
 });
-
-
-
